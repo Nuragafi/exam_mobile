@@ -38,14 +38,69 @@ class _ConfirmState extends State<Confirm> {
                 ),
                 child: Image.asset(
                   'assets/images/banner.png',
-                  height: 150,
+                  height: 130,
+                ),
+              ),
+              Positioned(
+                top: 140,
+                right: 30,
+                child: Container(
+                  height: 70,
+                  width: 200,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            const Text(
+                              'ANDI SUGIONO',
+                              style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              textAlign: TextAlign.center,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: const Text(
+                                'Logout',
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.red,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          margin: EdgeInsets.only(left: 10),
+                          width: 50,
+                          height: 50,
+                          color: Colors.blue,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               cardIndex == 0
                   ? Container(
                       margin: EdgeInsets.only(top: height(context) * 0.265),
                       padding: const EdgeInsets.all(30),
-                      width: 300,
+                      width: 320,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(7),
@@ -56,6 +111,7 @@ class _ConfirmState extends State<Confirm> {
                             'Konfirmasi data Peserta',
                             style: TextStyle(
                               fontSize: 22,
+                              fontWeight: FontWeight.bold,
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -175,7 +231,7 @@ class _ConfirmState extends State<Confirm> {
                   : Container(
                       margin: EdgeInsets.only(top: height(context) * 0.265),
                       padding: const EdgeInsets.all(30),
-                      width: 300,
+                      width: 320,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(7),
@@ -186,6 +242,7 @@ class _ConfirmState extends State<Confirm> {
                             'Konfirmasi tes',
                             style: TextStyle(
                               fontSize: 22,
+                              fontWeight: FontWeight.bold,
                             ),
                             textAlign: TextAlign.center,
                           ),
